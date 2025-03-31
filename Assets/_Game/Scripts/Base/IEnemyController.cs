@@ -8,8 +8,6 @@ namespace Assets._Game.Scripts
 {
     internal interface IEnemyController
     {
-        public void OnSpawnEnemy();
-        public void OnDestroyEnemy();
-
+        public void MoveEnemy();
     }
 }
