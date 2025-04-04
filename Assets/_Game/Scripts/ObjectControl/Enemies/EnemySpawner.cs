@@ -11,7 +11,7 @@ namespace Assets._Game.Scripts.ObjectControl.Enemies
 
         private void SetTimeSpawn()
         {
-            timeSpawn = Random.Range(3, 5);
+            timeSpawn = Random.Range(1, 7);
         }
         private void Awake()
         {
@@ -23,6 +23,7 @@ namespace Assets._Game.Scripts.ObjectControl.Enemies
             if (timeSpawn < 0)
             {
                 GameObject enemy = Instantiate(_enemyPrefab);
+                enemy.transform.position = this.transform.position;
                 enemy.SetActive(true);
                 SetTimeSpawn() ;
             }
